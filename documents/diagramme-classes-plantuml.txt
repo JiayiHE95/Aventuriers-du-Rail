@@ -1,0 +1,70 @@
+@startuml
+skinparam nodesep 220
+skinparam ranksep 120
+
+class Jeu {
+- joueurCourant: Joueur
+
++ defausserCarteWagon(CouleurWagon): void
++ piocherCarteWagon(): CouleurWagon
++ retirerCarteWagonVisible(CouleurWagon): void
++ piocherDestination(): Destination
++ remplirCartesWagonVisibles() : void
+
+}
+
+class Joueur {
+- couleur : Couleur
+- nom : String
+- nbWagons : int
+- nbGares : int
+- score : int
+
++ joueurTour()
++ choisirDestinations(List<Destination>, int)
+}
+
+enum CouleurWagon{
+}
+
+
+class Route {
+- nom : String
+- longueur : int
+- couleur : CouleurWagon
+}
+
+class Tunnel {
+}
+
+class Ferry {
+}
+
+class Destination {
+- ville1 : String
+- ville2 : String
+- valeur: int
+
+}
+
+class Ville {
+- nom : String
+}
+
+
+
+Route <|-- Tunnel
+Route <|-- Ferry
+
+Joueur "joueurs 2..5  "--* Jeu
+Joueur -left->"*" CouleurWagon
+Joueur "0..1 propriétaire"--"* destinations" Destination
+Joueur "0..1 proprietaire"<- Route
+Ville "0..3"-right->"0..1 prorpietaire"  Joueur
+
+Jeu -->"*" Destination
+Jeu -right->"*" Route
+
+Route -right->"ville1" Ville
+Route -right->"ville2" Ville
+@enduml
