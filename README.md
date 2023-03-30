@@ -34,8 +34,6 @@ Il existe 8 types de cartes wagon différents en plus des locomotives. Les coule
 
 <img src="documents/CouleurWagon.png" width="250" alt="generation-builder"/>
 
-Cette classe est un type énuméré et vous est intégralement donnée. Vous ne devriez pas la modifier (mais vous pouvez y ajouter des méthodes si vous l'estimez nécessaire).
-
 Lorsqu'un joueur choisit de prendre des cartes wagon, il peut en piocher jusqu'à deux par tour. Chacune de ces cartes doit être soit prise parmi les cinq faces visibles, soit tirée du dessus de la pioche. Lorsqu'une carte face visible est choisie, elle doit être immédiatement remplacée par une nouvelle carte tirée du sommet de la pioche.
 Si le joueur choisit de prendre une _Locomotive_ face visible parmi les cinq cartes exposées, il ne peut piocher d'autre carte lors de ce tour.
 
@@ -70,27 +68,16 @@ Un joueur peut utiliser son tour de jeu pour piocher des _Destinations_ supplém
 
 Les villes figurant sur une carte Destination sont le point de départ et d'arrivée d'un objectif secret que le joueur s'efforce d’atteindre en reliant ses villes avec des trains de sa couleur avant la fin de la partie. En cas de réussite, les points figurant sur la carte Destination sont gagnés par le joueur lorsque les objectifs sont révélés et comptabilisés en fin de partie. En cas d'échec, ces points sont déduits du score du joueur en fin de partie. Au cours d'une partie, un joueur peut piocher et conserver autant de cartes Destination qu’il le souhaite.
 
-  **Important :** Dans la **Phase 1** du projet, vous n'aurez pas à implémenter les algorithmes qui vérifient si une _Destination_ a été réalisée correctement. Cet aspect sera traité plus tard lors de la **Phase 2** du projet (dans le cadre du cours de Graphes). En revanche votre programme doit gérer correctement le choix des _Destinations_ et défausser correctement celles non voulues par le joueur.
-
 ### Bâtir une gare
 Une gare permet à son propriétaire d'emprunter une et une seule des routes appartenant à l'un de ses opposants pour relier des villes. Les gares peuvent être construites sur n'importe quelle ville qui n'en contient pas. Chaque joueur peut en construire une seule par tour. Le nombre de gares par joueur est de 3 maximum. 
 
 ### Fin du jeu
 Le déclenchement de la fin de la partie a lieu lorsqu'un joueur **_toto_** vient de capturer une route et sa réserve de wagons passe à 0, 1 ou 2 wagons. Ainsi, après le tour de **_toto_**, chaque joueur, en incluant **_toto_**, joue un dernier tour. À l’issue de celui-ci, le jeu s’arrête et chacun compte ses points.
 
-**Rappel important :** Dans la **Phase 1** du projet, il vous est demandé uniquement de gérer le déclenchement de la fin de la partie et l'arrêt du jeu, en ne comptant que :
-  * les points obtenus à la construction des routes (en fonction de leur longueur)
-  * les points correspondant aux gares non construites par le joueur.
-  
-  Le décompte des points en fonction des destinations accomplies et de la route la plus longue, sera à faire lors de **Phase 2** du projet, qui démarrera au mois d'avril dans le cadre du cours de Graphes (R2.07).
-
-
 ## Architecture générale du code
 Voici le diagramme de classe simplifié du code métier fourni (paquetage `fr.umontpellier.iut.rails`) :
 
 <img style="max-width: 600px; height: auto; " src="https://www.plantuml.com/plantuml/png/VLF1Rjim3BthAmYVacmA6W-x545HeCC653jjHNTMRJRHAai69HKOidtGlcC_DjgCOmKjUkJZu-Dxb7qTaw6KEwVYa_Mz8TE13or6xA6kBmgKZ7yQq0sZgd4cHhZ530UbuMV8cEacPEQaIxWTIwNUGOkF9iU8TCDBy8VP1RzWckFsM2mluJdObfcz3St-ZCUzaieSmcIfvDpRQ1ySlYtv2MEotYGhcdCfabtlh4Z6KZCkbd1KKd-cl19iZDp8IZYPPCo7ZkllYQpV3UN3A1WPipwDm1T3EDUn2OJ7Yht85Uz2fiMIosOVs4ffFow-sfYs1NBrVXXU3WxHv-xiO0T69-FVGau8XvSUNV2xCPEuA7ELMlC9xhBtwE0m8v-Hw5S95Fx6bS_METmKMmMfpn0px18Jiz8zyrxQ7dCfYRJzhVNHKu689wMExrN9PIFKw_L7W4hhrV3fJctjy37fgsfLdMUUfY_Mwmtq57go__ucOmbPeLf1MxnCLQH-TH9bSAlbBPH46nWVAarsjsS79pxr4nzEFnCR1YqkYrKZBFFI4tMvnToG9wZaeAyswwbvZRxDdViF"  width=900 alt="diagramme de classes">
-
-Les classes que vous n'aurez pas à modifier (normalement) sont  `Ville`, `Destination`, `CouleurWagon`, ainsi que les classes du paquetage `fr.umontpellier.iut.gui`.
 
 ## Interface utilisateur
 
