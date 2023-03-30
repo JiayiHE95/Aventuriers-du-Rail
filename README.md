@@ -8,53 +8,6 @@
 Ce projet a lieu dans le cadre des Situations d'Apprentissage et Évaluation du BUT Informatique (SAE S2.01 et S2.02). Il fera intervenir plusieurs compétences acquises durant le Semestre 2 : le développement orienté objets, les notions de qualité de développement (tests unitaires, gestion de version, etc), les algorithmes de graphes et les interfaces homme-machine.
 
 
-**Pour des questions :**
-* Le [forum Piazza](https://piazza.com/class/kyo4oooauez252) - à privilégier lorsque vous avez des questions sur le projet.
-* [Email](mailto:petru.valicov@umontpellier.fr) pour une question d'ordre privée concernant le projet.
-
-## Calendrier de travail
-* **Phase 1 : _développement de la mécanique du jeu en Java_**
-  * **Période :** fin février - 27 mars 2022
-  * **Cours concerné** : [_Développement Orienté Objets_](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets)
-  * **Enseignants :**
-      [Marin Bougeret](mailto:marin.bougeret@umontpellier.fr),
-      [Gaëlle Hisler](mailto:gaelle.hisler@umontpellier.fr),<!--[Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),-->
-      [Cyrille Nadal](mailto:cyrille.nadal@umontpellier.fr),
-      [Victor Poupet](mailto:victor.poupet@umontpellier.fr),
-      [Gilles Trombettoni](mailto:gilles.trombettoni@umontpellier.fr),
-      [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-  
-  Après votre rendu, une correction pour cette phase vous sera fournie afin que vous puissiez continuer sur les phases 2 et 3 du projet.
-
-* **Phase 2 : _mise en œuvre des algorithmes de graphes afin de définir des stratégies de jeu pour les joueurs_**
-  * **Période (prévisionnelle) :** avril-mai 2022
-  * **Cours concerné** : _Graphes_
-  * **Enseignants :**
-      [Irène Larramendy](mailto:irene.larramendy-valverde@umontpellier.fr),
-      [Alain Marie-Jeanne](mailto:alain.marie-jeanne@umontpellier.fr)
-
-* **Phase 3 : _implémentation d'une interface graphique sous [JavaFX](https://openjfx.io/)_**
-  * **Cours concerné** : _Interface Homme-Machine_
-  * **Enseignants :**
-      [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr),
-      [Cyrille Nadal](mailto:cyrille.nadal@umontpellier.fr),
-      [Nihal Ouherrou](mailto:nihal.ouherrou@umontpellier.fr) -- responsable côté ergonomie de l'IHM,
-      [Nathalie Palleja](mailto:nathalie.palleja@umontpellier.fr),
-      [Xavier Palleja](mailto:xavier.palleja@umontpellier.fr),
-      [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-  * **Période (prévisionnelle) :** avril-juin 2022
-
-## Consignes générales
-Un squelette du code vous est fourni et vous devrez :
-  * écrire le corps des fonctions non implémentées qui vous sont fournies
-  * ajouter des fonctions/attributs/classes là où cela vous semble utile
-  * vérifier que votre programme marche en faisant des tests unitaires
-  * sauf indication explicite de la part des enseignants, ne pas modifier la signature des méthodes/attributs/classes qui vous sont données
-
-Des consignes détaillées du projet vous sont données dans le fichier [Consignes.md](Consignes.md). Elles seront complétées pour chaque phase au fur et à mesure et vous en serez informés.
-
-_**Le non-respect de ces consignes impliquera une pénalité de plusieurs points sur la note finale du projet.**_
-
 ## Présentation
 Le but de ce projet est de produire une implémentation en _Java_ du jeu de plateau _Aventuriers du Rail Europe_. Il existe de nombreuses extensions du jeu qui modifient considérablement les règles de base. Dans ce projet, nous ne considérerons que la **version Europe** du jeu.
 
@@ -147,31 +100,7 @@ Pour lancer une partie :
 
 Vous pourrez alors observer en parallèle l'affichage dans la console et sur l'interface graphique.
 
-### Interface graphique (web)
-Pour rendre l'expérience ludique, et pour que votre jeu rassemble à un _vrai_ jeu, une interface graphique vous est également fournie. Cette interface interprète la saisie console et affiche le jeu de manière plus proche d'un utilisateur non-informaticien dans un navigateur web. Vous n'aurez pas à la modifier (ni à adapter votre code), cette partie étant complètement indépendante de votre projet. Nous vous conseillons d'utiliser l'interface graphique directement pour simuler votre jeu, car utiliser la console peut s'avérer particulièrement pénible.
-
-**Important** : Des méthodes spéciales `void log()`, `String lireLigne()`, `void prompt()`, `String toLog()` et `Object asPOJO()` ont été ajoutées aux classes. Elles sont nécessaires pour l'IHM. **Vous ne devriez pas les modifier !**
-
-
 
 ### Interface console
 Une interface utilisateur en ligne de commandes vous est également fournie. Les informations du jeu sont affichées à l'écran en utilisant la sortie standard et les choix des joueurs peuvent se faire par lecture sur l'entrée standard (clavier). Comme dit précédemment, il vaut mieux privilégier l'interface web qui vous est fournie pour faire vos simulations.
 
-**Important** : Si vous êtes amenés à faire des modifications du code gérant l'affichage, pour notamment afficher des informations supplémentaires, vous veillerez à ce que cela n'affecte pas le fonctionnement général de ces fonctions.
-
-
-## Rendu attendu
-
-L'intégralité du code source du projet doit résider dans le dépôt GitLab associé à votre équipe de projet (ce dépôt a été créé dans votre compte). Vous devez compléter les classes Java qui vous sont données et ajouter des nouvelles classes si nécessaire.
-
-Toutes les méthodes qui lèvent une exception avec l'instruction `throw new RuntimeException("Méthode non implémentée !")` doivent être complétées selon les spécifications (en respectant leurs signatures). Vous êtes encouragés à ajouter des attributs et méthodes aux classes, lorsque cela vous semble nécessaire. La modification du corps des méthodes qui vous sont fournies est possible à condition de ne pas modifier le fonctionnement général de ces fonctions (décrit dans la spécification des méthodes).
-
-**Rappel : pas de modification des signatures des méthodes/attributs qui vous sont fournis.**
-
-## Évaluation
-
-L'évaluation du projet se fera à l'aide de tests unitaires automatisés. Un premier jeu de tests vous est fourni (comme d'habitude dans le répertoire `src/test/java`) pour que vous puissiez vérifier le bon fonctionnement des fonctionnalités de base. Puis nous utiliserons un second jeu de tests (secret) pour l'évaluation finale.
-
-Il est donc attendu que les projets rendus passent le premier jeu de tests sans erreurs, mais vous devez également vérifier par vous-mêmes (en écrivant d'autres tests unitaires) que le projet se comporte correctement dans les différents cas particuliers qui peuvent se produire et qui ne sont pas nécessairement couverts par les tests qui vous ont été fournis.
-
-**Remarque importante** : puisque l'évaluation des rendus se fait par des tests automatisés, **les projets qui ne compilent pas ou qui ne respectent pas les signatures données, seront automatiquement rejetés** et la note sera 0.
