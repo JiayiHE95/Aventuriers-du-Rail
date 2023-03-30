@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	--col-BLEU: #205099;
+	--col-light-BLEU: #87BDE1;
+	--col-ROUGE: #D64036;
+	--col-light-ROUGE: #CC916C;
+	--col-VERT: #65964C;
+	--col-light-VERT: #C6E370;
+	--col-JAUNE: #C69943;
+	--col-light-JAUNE: #F6E678;
+	--col-ROSE: #5E3182;
+	--col-light-ROSE: #D89FDB;
+	--col-dark: #373F3B;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: var(--col-dark);
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: "IM Fell English SC", serif;
+	background: #E1E5E7;
+}
+
+a {
+	color: rgb(0, 100, 200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0, 80, 160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+#log .tour {
+	margin-left: 100px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#log .joueur {
+	font-weight: bold;
+}
+
+#log .ville, #log .route {
+	font-style: italic;
+	font-weight: bold;
+}
+
+#log .couleur {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	font-weight: bold;
+}
+
+#log .couleur.rouge {
+	text-decoration-color: #be3c33;
+}
+
+#log .couleur.vert {
+	text-decoration-color: #96c156;
+}
+
+#log .couleur.bleu {
+	text-decoration-color: #489fd9;
+}
+
+#log .couleur.jaune {
+	text-decoration-color: #fbe969;
+}
+
+#log .couleur.orange {
+	text-decoration-color: #d58b44;
+}
+
+#log .couleur.noir {
+	text-decoration-color: #3a4f59;
+}
+
+#log .couleur.blanc {
+	text-decoration-color: #e8e9ec;
+}
+
+#log .couleur.rose {
+	text-decoration-color: #b991bb;
+}
+
+#log .couleur.gris {
+	text-decoration-color: #969b9d;
+}
+
+img.couleur {
+	width: 1.5em;
+	height: 1.5em;
+	margin-bottom: -0.5em;
+}
