@@ -2,12 +2,6 @@
 
 # Projet - _Aventuriers du Rail (Europe)_
 
-
-### IUT Montpellier-Sète – Département Informatique
-
-Ce projet a lieu dans le cadre des Situations d'Apprentissage et Évaluation du BUT Informatique (SAE S2.01 et S2.02). Il fera intervenir plusieurs compétences acquises durant le Semestre 2 : le développement orienté objets, les notions de qualité de développement (tests unitaires, gestion de version, etc), les algorithmes de graphes et les interfaces homme-machine.
-
-
 ## Présentation
 Le but de ce projet est de produire une implémentation en _Java_ du jeu de plateau _Aventuriers du Rail Europe_. Il existe de nombreuses extensions du jeu qui modifient considérablement les règles de base. Dans ce projet, nous ne considérerons que la **version Europe** du jeu.
 
@@ -90,4 +84,5 @@ Vous pourrez alors observer en parallèle l'affichage dans la console et sur l'i
 
 ### Interface console
 Une interface utilisateur en ligne de commandes vous est également fournie. Les informations du jeu sont affichées à l'écran en utilisant la sortie standard et les choix des joueurs peuvent se faire par lecture sur l'entrée standard (clavier). Comme dit précédemment, il vaut mieux privilégier l'interface web qui vous est fournie pour faire vos simulations.
+
 
